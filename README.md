@@ -8,3 +8,5 @@ Prints ASCII Truth Table for Propositional Logic and [SE212](https://www.student
 
 ![screenshot](https://raw.githubusercontent.com/cindywang328/truthtable/master/Screen%20Shot%202019-09-22%20at%2012.32.01%20AM.png)
 
+I managed to connect this to a webpage using Flask, but it appears that Flask [can't be deployed](https://stackoverflow.com/questions/23807039/flask-app-on-github-pages) on GitHub Pages. It was still a good learning experience. 
+![screenshot](https://raw.githubusercontent.com/cindywang328/truthtable/master/Screen%20Shot%202019-09-22%20at%203.04.27%20AM.png)
