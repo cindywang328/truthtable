@@ -34,6 +34,7 @@ T | F | T || F     | T
 T | T | F || T     | F
 T | T | T || T     | T
 ```
+* NOTE: boolean expresisons must be enclosed in single quotes!
 
 I managed to connect this to a webpage using Flask, but it appears that Flask can't be deployed on [GitHub Pages](https://stackoverflow.com/questions/23807039/flask-app-on-github-pages). It was still a good learning experience. 
 ![screenshot](https://raw.githubusercontent.com/cindywang328/truthtable/master/Screen%20Shot%202019-09-22%20at%203.04.27%20AM.png)
