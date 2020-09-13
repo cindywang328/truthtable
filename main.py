@@ -1,6 +1,10 @@
+#!/usr/bin/env python
+
 import re
+import argparse
 from collections import defaultdict
 from pprint import pprint
+
 # only use &, !, |, =>, <=>, T, F, (). Variables must be a letter.
 def check_integrity(s):
   for i in s:
@@ -415,16 +419,14 @@ def main():
   # variables should be A-Za-z and not T/F
   # operators should be ! | & => <=> () 
   # generates TT using set union of all variables, using the "a | a&b <-> a" rule
-  input_list = ["(!c => a) & a <=> a", "b & c => d", "d | a", "c & !d"]
+  # input strings must be single quoted!!
+
+  # sample usage: ./main.py '(!c => a) & a <=> a' 'b & c => d' 'd | a' 'c & !d'
+  parser = argparse.ArgumentParser(description='Generates truth table from boolean expressions.')
+  parser.add_argument('expressions', metavar='A', type=str, nargs='+', help='an expression to evaluate')
+  args = parser.parse_args()
+  input_list = args.expressions
   print_multi_truth_table_results(input_list)
 
-
-
-
-
-
-
-  
-
-
-
+if __name__ == "__main__":
+  main()
