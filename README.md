@@ -9,5 +9,32 @@ Prints ASCII Truth Table for Propositional Logic and [SE212](https://www.student
 
 ![screenshot](https://raw.githubusercontent.com/cindywang328/truthtable/master/Screen%20Shot%202019-09-22%20at%2012.32.01%20AM.png)
 
+## Installation
+* Clone the repository
+* Make main.py executable
+```bash
+chmod +x main.py
+```
+* Create a symlink
+```bash
+sudo ln -sf /path/to/repo/main.py /usr/local/bin/tt
+```
+* You can now run the executable:
+```bash
+tt 'a & b' 'b => c'
+
+a | b | c || a & b | b => c
+___________________________
+F | F | F || F     | T
+F | F | T || F     | T
+F | T | F || F     | F
+F | T | T || F     | T
+T | F | F || F     | T
+T | F | T || F     | T
+T | T | F || T     | F
+T | T | T || T     | T
+```
+* NOTE: boolean expresisons must be enclosed in single quotes!
+
 I managed to connect this to a webpage using Flask, but it appears that Flask can't be deployed on [GitHub Pages](https://stackoverflow.com/questions/23807039/flask-app-on-github-pages). It was still a good learning experience. 
 ![screenshot](https://raw.githubusercontent.com/cindywang328/truthtable/master/Screen%20Shot%202019-09-22%20at%203.04.27%20AM.png)
